@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindSpark – Mood to Activity Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MindSpark</h1>
+            <p class="subtitle">Turn your mood into action</p>
+        </header>
+
+        <main>
+            <div id="mood-selection" class="section active">
+                <h2>How are you feeling right now?</h2>
+                <div class="mood-grid">
+                    <button class="mood-btn" data-mood="bored">😐 Bored</button>
+                    <button class="mood-btn" data-mood="curious">🤔 Curious</button>
+                    <button class="mood-btn" data-mood="creative">🎨 Creative</button>
+                    <button class="mood-btn" data-mood="tired">😴 Tired</button>
+                    <button class="mood-btn" data-mood="stressed">😫 Stressed</button>
+                    <button class="mood-btn" data-mood="unmotivated">📉 Unmotivated</button>
+                    <button class="mood-btn" data-mood="overthinking">🌀 Overthinking</button>
+                </div>
+            </div>
+
+            <div id="results" class="section hidden">
+                <h2 id="result-title">Here is your spark</h2>
+                <div class="cards-container">
+                    <div class="card do-card">
+                        <h3>Do</h3>
+                        <p id="do-text">Loading...</p>
+                    </div>
+                    <div class="card learn-card">
+                        <h3>Learn</h3>
+                        <p id="learn-text">Loading...</p>
+                    </div>
+                    <div class="card think-card">
+                        <h3>Think</h3>
+                        <p id="think-text">Loading...</p>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button id="generate-again-btn" class="action-btn">Generate Another</button>
+                    <button id="back-btn" class="action-btn outline">Change Mood</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
