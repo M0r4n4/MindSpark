@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function generateSuggestions(mood) {
         if (!suggestions[mood]) return;
         
-        // Remove active class to trigger re-animation smoothly
+
         resultsDiv.classList.remove('active');
         
         setTimeout(() => {
@@ -296,7 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
             learnText.textContent = getRandomItem(suggestions[mood].learn);
             thinkText.textContent = getRandomItem(suggestions[mood].think);
             
-            // Add block explicitly again
+
             resultsDiv.classList.add('active');
         }, 50);
     }
@@ -305,14 +305,14 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', () => {
             currentMood = btn.getAttribute('data-mood');
             
-            // Hide mood selection
+
             moodSelectionDiv.classList.remove('active');
             moodSelectionDiv.classList.add('hidden');
             
-            // Generate suggestions for current mood
+
             generateSuggestions(currentMood);
             
-            // Show results section
+
             resultsDiv.classList.remove('hidden');
         });
     });
@@ -322,11 +322,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     backBtn.addEventListener('click', () => {
-        // Hide results
+
         resultsDiv.classList.remove('active');
         resultsDiv.classList.add('hidden');
         
-        // Show mood selection
+        
         moodSelectionDiv.classList.remove('hidden');
         moodSelectionDiv.classList.add('active');
         currentMood = '';
